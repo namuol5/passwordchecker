@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.louman.passwordchecker.page2"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <LinearLayout
+        android:id="@+id/2linearname"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/2nametext"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.25"
+            android:text="Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+        <EditText
+            android:id="@+id/2nameedit"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/2linearaddress"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="72dp">
+
+        <TextView
+            android:id="@+id/2addresstext"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.75"
+            android:text="Address"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+        <EditText
+            android:id="@+id/2addressedit"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/2linearemail"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="137dp">
+
+        <TextView
+            android:id="@+id/2emailtext"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.25"
+            android:text="Email"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+        <EditText
+            android:id="@+id/2emailedit"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

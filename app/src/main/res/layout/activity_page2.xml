@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteX="0dp">
 
     <LinearLayout
-        android:id="@+id/2linearname"
+        android:id="@+id/p2linearname"
         android:layout_width="337dp"
         android:layout_height="46dp"
         android:orientation="horizontal"
@@ -18,7 +18,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <TextView
-            android:id="@+id/2nametext"
+            android:id="@+id/p2nametext"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:layout_weight="4.25"
@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/2linearaddress"
+        android:id="@+id/p2linearaddress"
         android:layout_width="337dp"
         android:layout_height="46dp"
         android:orientation="horizontal"
@@ -49,7 +49,7 @@
         tools:layout_editor_absoluteY="72dp">
 
         <TextView
-            android:id="@+id/2addresstext"
+            android:id="@+id/p2addresstext"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:layout_weight="3.75"
@@ -60,7 +60,7 @@
             tools:layout_editor_absoluteY="59dp" />
 
         <EditText
-            android:id="@+id/2addressedit"
+            android:id="@+id/p2addressedit"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -71,7 +71,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/2linearemail"
+        android:id="@+id/p2linearemail"
         android:layout_width="337dp"
         android:layout_height="46dp"
         android:orientation="horizontal"
@@ -80,7 +80,7 @@
         tools:layout_editor_absoluteY="137dp">
 
         <TextView
-            android:id="@+id/2emailtext"
+            android:id="@+id/p2emailtext"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:layout_weight="4.25"
@@ -91,7 +91,7 @@
             tools:layout_editor_absoluteY="59dp" />
 
         <EditText
-            android:id="@+id/2emailedit"
+            android:id="@+id/p2emailedit"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -100,5 +100,25 @@
             tools:layout_editor_absoluteY="59dp" />
 
     </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/Spanish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spanish"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="216dp" />
 
 </android.support.constraint.ConstraintLayout>

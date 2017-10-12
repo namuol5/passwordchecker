@@ -11,16 +11,18 @@ import android.view.View.OnClickListener;
 import android.widget.TextView.OnEditorActionListener;
 import android.view.inputmethod.EditorInfo;
 import android.content.Intent;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity implements  OnEditorActionListener, OnClickListener
 {
     public static final String EXTRA_MESSAGE = "com.saccity362.scccismobiledesignclassportal";
-    private Button SubmitButton;
-    private TextView Prompt;
-    private TextView UserNameTextView;
-    private TextView PasswordTextView;
-    private EditText usernameEditText;
-    private EditText passwordEditText;
+    private Button buttonsubmit;
+    private TextView textwelcome;
+    private TextView textusername;
+    private TextView textpassword;
+    private EditText editusername;
+    private EditText editpassword;
     private boolean match,submitOn = false;
 
     @Override
@@ -28,29 +30,28 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SubmitButton = (Button) findViewById(R.id.SubmitButton);
-        UserNameTextView = (TextView) findViewById(R.id.usernameTextView);
-        usernameEditText = (EditText) findViewById(R.id.usernameEditText);
-        PasswordTextView = (TextView) findViewById(R.id.passwordTextView);
-        passwordEditText = (EditText) findViewById(R.id.passwordEditText);
-        SubmitButton.setOnClickListener(this);
-        usernameEditText.setOnEditorActionListener(this);
-        passwordEditText.setOnEditorActionListener(this);
-        String usernameString = usernameEditText.getText().toString();
-        String passwordString = passwordEditText.getText().toString();
-
+        buttonsubmit = (Button) findViewById(R.id.buttonsubmit);
+        textusername = (TextView) findViewById(R.id.textusername);
+        editusername = (EditText) findViewById(R.id.editusername);
+        textpassword = (TextView) findViewById(R.id.textpassword);
+        editpassword = (EditText) findViewById(R.id.editpassword);
+        buttonsubmit.setOnClickListener(this);
+        editusername.setOnEditorActionListener(this);
+        editpassword.setOnEditorActionListener(this);
+        String usernameString = editusername.getText().toString();
+        String passwordString = editpassword.getText().toString();
     }
     public void sendMessage(View view) {
-        Intent intent = new Intent (this,DisplayMessageActivity.class);
-        EditText editText =(EditText) findViewById(R.id.usernameEditText);
-        String message = usernameEditText.getText().toString();
+        Intent intent = new Intent(this, page2.class);
+        EditText editusername =(EditText) findViewById(R.id.editusername);
+        String message = editusername.getText().toString();
         intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
     }
 
     @Override
     public void onClick(View v) {
-        if ((v.getId() == R.id.SubmitButton)&& match) sendMessage(v);
+        if ((v.getId() == R.id.buttonsubmit)&& match) sendMessage(v);
 
     }
 
@@ -58,21 +59,21 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
     @Override
 
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event)
-    {   String usernameString = usernameEditText.getText().toString();
-        String passwordString = passwordEditText.getText().toString();
+    {   String usernameString = editusername.getText().toString();
+        String passwordString = editpassword.getText().toString();
 
         switch (v.getId())
         {
-            case R.id.usernameEditText :
+            case R.id.editusername :
                 if (actionId ==  EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_UNSPECIFIED)
                 {
-                    usernameString = usernameEditText.getText().toString();
+                    usernameString = editusername.getText().toString();
                 }
                 break;
-            case R.id.passwordEditText :
+            case R.id.editpassword :
                 if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_UNSPECIFIED)
-                {   passwordString = passwordEditText.getText().toString();
-                    if (passwordString.equalsIgnoreCase("abida")) match=true;
+                {   passwordString = editpassword.getText().toString();
+                    if (passwordString.equalsIgnoreCase("louman")) match=true;
                     //{Prompt.setText("That's correct");match = true;}  else  Prompt.setText("Incorrect Password!");
 
                 }

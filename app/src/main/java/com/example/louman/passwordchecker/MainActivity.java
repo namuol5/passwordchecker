@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
     private TextView textwelcome;
     private TextView textusername;
     private TextView textpassword;
-    private EditText editusername;
     private EditText editpassword;
+    private EditText editusername;
     private boolean match,submitOn = false;
 
     @Override
@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
         buttonsubmit.setOnClickListener(this);
         editusername.setOnEditorActionListener(this);
         editpassword.setOnEditorActionListener(this);
-        String usernameString = editusername.getText().toString();
-        String passwordString = editpassword.getText().toString();
+
     }
     public void sendMessage(View view) {
         Intent intent = new Intent(this, page2.class);
@@ -51,8 +50,8 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
 
     @Override
     public void onClick(View v) {
-        if ((v.getId() == R.id.buttonsubmit)&& match) sendMessage(v);
-
+        if ((v.getId() == R.id.buttonsubmit)&& match)
+            sendMessage(v);
     }
 
 
@@ -73,7 +72,8 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
             case R.id.editpassword :
                 if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_UNSPECIFIED)
                 {   passwordString = editpassword.getText().toString();
-                    if (passwordString.equalsIgnoreCase("louman")) match=true;
+                    if (passwordString.equalsIgnoreCase("louman"))
+                        match=true;
                     //{Prompt.setText("That's correct");match = true;}  else  Prompt.setText("Incorrect Password!");
 
                 }
@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements  OnEditorActionLi
 
 
         return false;
+
     }
 }
 

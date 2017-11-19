@@ -117,7 +117,7 @@ public class page2 extends AppCompatActivity {
 
     private void setUserInfoWithEnteredData() {
         String memberStatus = spinner.getSelectedItem().toString();
-        userInfo.setInfo(languagePreference, memberStatus, cityField.getText().toString(), stateField.getText().toString());
+        userInfo.setInfo(languagePreference, memberStatus, "test", "test");
         userInfo.print();
     }
 

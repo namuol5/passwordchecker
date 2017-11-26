@@ -8,18 +8,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="133dp"
+        android:layout_width="0dp"
         android:layout_height="187dp"
-        app:srcCompat="@drawable/me"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/me" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="202dp"
+        android:layout_width="0dp"
         android:layout_height="193dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="79dp"
         android:text="Thank you for checking out my app! My name is Louman Cheung and I am studying computer programming. I really enjoy learning about and creating mobile applications!"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="79dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

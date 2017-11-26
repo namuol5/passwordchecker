@@ -9,17 +9,22 @@
     tools:layout_editor_absoluteY="81dp">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="0dp">
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
+            <TextView
                 android:id="@+id/p2nametext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Name"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -30,16 +35,23 @@
                 android:id="@+id/p2nameedit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="105dp"
                 tools:layout_editor_absoluteY="0dp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/p2addresstext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Address"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -50,16 +62,22 @@
                 android:id="@+id/p2addressedit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="105dp"
                 tools:layout_editor_absoluteY="46dp" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/p2emailtext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Email"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -70,11 +88,12 @@
                 android:id="@+id/p2emailedit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="105dp"
                 tools:layout_editor_absoluteY="92dp" />
-
+        </LinearLayout>
 
         <Spinner
             android:id="@+id/spinner"
@@ -83,94 +102,110 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="293dp" />
 
-    <RadioGroup
-        android:id="@+id/languageSelectors"
-        android:layout_width="274dp"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="187dp">
-
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="137dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="English"
-            android:textSize="24sp"
-            android:textStyle="bold"
+        <RadioGroup
+            android:id="@+id/languageSelectors"
+            android:layout_width="274dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="154dp" />
+            tools:layout_editor_absoluteY="187dp">
 
-        <RadioButton
-            android:id="@+id/radioButton2"
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="English"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Spanish"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="150dp"
+                tools:layout_editor_absoluteY="154dp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/lblRateMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Spanish"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="154dp" />
+            android:text="Rate Me"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="324dp" />
 
-    </RadioGroup>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/lblRateMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rate Me"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="324dp" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="245dp"
+            android:layout_height="57dp"
+            android:numStars="5"
+            android:rating="1.0"
+            android:stepSize="1.0"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="349dp" />
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="349dp" />
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            tools:layout_editor_absoluteX="272dp"
+            tools:layout_editor_absoluteY="349dp" />
 
-    <TextView
-        android:id="@+id/txtRatingValue"
-        android:layout_width="160dp"
-        android:layout_height="24dp"
-        android:text=""
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="406dp" />
+    </LinearLayout>
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="245dp"
-        android:layout_height="57dp"
-        android:numStars="5"
-        android:rating="1.0"
-        android:stepSize="1.0"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="349dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/lblResult"
-        android:layout_width="81dp"
-        android:layout_height="28dp"
-        android:text="Result : "
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="406dp" />
 
+
+        <TextView
+            android:id="@+id/lblResult"
+            android:layout_width="81dp"
+            android:layout_height="28dp"
+            android:text="Result : "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="406dp" />
+
+        <TextView
+            android:id="@+id/txtRatingValue"
+            android:layout_width="160dp"
+            android:layout_height="24dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="406dp" />
+
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonSubmit"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="testbtn_onclick"
-        android:text="Button"
-        tools:layout_editor_absoluteX="0dp"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="136dp"
         tools:layout_editor_absoluteY="447dp" />
-
-    </LinearLayout>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
